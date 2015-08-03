@@ -1,0 +1,2 @@
+# Python dependencies installed in Dockerfile
+onecodex==0.0.10
