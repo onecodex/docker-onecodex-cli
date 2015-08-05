@@ -14,3 +14,8 @@
     X=$(onecodex --version 2>&1)
     [[ $X == *0.0.10\ \(API\ v0\)* ]]
 }
+
+@test "Join paired ends script exists" {
+    X=$(python /scripts/join_paired_ends.py --help)
+    [[ $X == *Join\ two\ FASTQ\ paired\ end\ read\ files.* ]]
+}

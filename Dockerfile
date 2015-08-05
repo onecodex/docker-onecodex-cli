@@ -17,6 +17,9 @@ RUN pip install -r /tmp/requirements.txt && rm /tmp/requirements.txt
 # Add binaries
 ADD bin/fastq-dump /usr/local/bin/fastq-dump
 
+# Add scripts
+ADD scripts/ /scripts/
+
 # Integration tests
 ADD test /tmp/test
 RUN bats /tmp/test
