@@ -10,9 +10,9 @@
     [[ $F == *2.5.2* ]]
 }
 
-@test "One Codex CLI v0.0.10" {
+@test "One Codex CLI v0.1.2" {
     X=$(onecodex --version 2>&1)
-    [[ $X == *0.0.10\ \(API\ v0\)* ]]
+    [[ $X == *0.1.2\ \(API\ v0\)* ]]
 }
 
 @test "Join paired ends script exists" {
