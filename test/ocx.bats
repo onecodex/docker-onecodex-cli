@@ -24,3 +24,8 @@
     X=$(python /scripts/join_paired_ends.py --help)
     [[ $X == *Join\ two\ FASTQ\ paired\ end\ read\ files.* ]]
 }
+
+@test "Join paired ends script supports interleaving" {
+    X=$(python /scripts/join_paired_ends.py --help)
+    [[ $X == *interleave* ]]
+}
