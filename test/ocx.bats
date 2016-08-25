@@ -10,6 +10,11 @@
     [[ $F == *2.5.2* ]]
 }
 
+@test "AWS CLI 1.8.3" {
+    X=$(aws --version 2>&1)
+    [[ $X == *aws-cli/1.8.3* ]]
+}
+
 @test "One Codex CLI v0.1.2" {
     X=$(onecodex --version 2>&1)
     [[ $X == *0.1.2\ \(API\ v0\)* ]]
