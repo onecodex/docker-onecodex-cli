@@ -17,7 +17,7 @@ RUN pip install -r /tmp/requirements.txt && rm /tmp/requirements.txt
 ADD bin/fastq-dump /usr/local/bin/fastq-dump
 
 # Add join_paired_docs scripts
-ADD https://gist.githubusercontent.com/boydgreenfield/805ac27e0a6b9a5adea7/raw/30e4a7c4510115ea198b10aacdac232c1296fe3b/join_paired_ends.py /scripts/
+ADD https://gist.githubusercontent.com/boydgreenfield/805ac27e0a6b9a5adea7/raw/eae0640ea0b6b02dbe6bf22b18af605d04ce91f6/join_paired_ends.py /scripts/
 
 # Integration tests
 ADD test /tmp/test
