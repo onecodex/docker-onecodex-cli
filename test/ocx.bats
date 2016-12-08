@@ -15,9 +15,9 @@
     [[ $X == *aws-cli/1.8.3* ]]
 }
 
-@test "One Codex CLI v0.1.2" {
+@test "One Codex CLI v0.2.0a1" {
     X=$(onecodex --version 2>&1)
-    [[ $X == *0.1.2\ \(API\ v0\)* ]]
+    [[ $X == *0.2.0-alpha1* ]]
 }
 
 @test "Join paired ends script exists" {

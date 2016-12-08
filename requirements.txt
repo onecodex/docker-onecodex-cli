@@ -1,3 +1,3 @@
 # Python dependencies installed in Dockerfile
-onecodex==0.1.2
+onecodex==0.2.0a1
 awscli==1.8.3
