@@ -13,8 +13,11 @@ RUN git clone https://github.com/sstephenson/bats.git /tmp/bats && \
 ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt && rm /tmp/requirements.txt
 
-# Add binaries
-ADD bin/fastq-dump /usr/local/bin/fastq-dump
+# Add the AWS CLI binaries
+RUN cd /tmp && \
+    wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.0/sratoolkit.2.8.0-ubuntu64.tar.gz && \
+    tar xzvf sratoolkit.2.8.0-ubuntu64.tar.gz && \
+    cp sratoolkit.2.8.0-ubuntu64/bin/fastq-dump /usr/local/bin/
 
 # Add join_paired_docs scripts
 ADD https://gist.githubusercontent.com/boydgreenfield/805ac27e0a6b9a5adea7/raw/eae0640ea0b6b02dbe6bf22b18af605d04ce91f6/join_paired_ends.py /scripts/

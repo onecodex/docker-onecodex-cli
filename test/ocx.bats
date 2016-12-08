@@ -5,9 +5,9 @@
     [[ $V == Python\ 2.7* ]]
 }
 
-@test "fastq-dump v2.5.2" {
+@test "fastq-dump v2.8.0" {
     F=$(fastq-dump --version)
-    [[ $F == *2.5.2* ]]
+    [[ $F == *2.8.0* ]]
 }
 
 @test "AWS CLI 1.8.3" {
