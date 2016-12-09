@@ -5,6 +5,11 @@
     [[ $V == Python\ 2.7* ]]
 }
 
+@test "Pigz installed" {
+    V=$(pigz --version 2>&1)
+    [[ $V == pigz\ 2.3* ]]
+}
+
 @test "fastq-dump v2.8.0" {
     F=$(fastq-dump --version)
     [[ $F == *2.8.0* ]]

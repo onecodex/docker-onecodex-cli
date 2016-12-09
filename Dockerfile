@@ -3,7 +3,7 @@ MAINTAINER Sam Minot <sam@onecodex.com>
 
 # Update and install Python
 RUN apt-get update -y
-RUN apt-get install -y python python-pip curl wget git
+RUN apt-get install -y python python-pip curl wget git pigz
 
 # Install Bats
 RUN git clone https://github.com/sstephenson/bats.git /tmp/bats && \
