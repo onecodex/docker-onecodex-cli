@@ -1,4 +1,4 @@
-# One Codex CLI + other tools Docker image
+# DEPRECATED: One Codex CLI + other tools Docker image
 
 [![Docker Repository on Quay.io](https://quay.io/repository/refgenomics/docker-onecodex-cli/status "Docker Repository on Quay.io")](https://quay.io/repository/refgenomics/docker-onecodex-cli)
 
