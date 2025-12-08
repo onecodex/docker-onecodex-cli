@@ -1,9 +1,8 @@
-FROM debian:jessie
-MAINTAINER Sam Minot <sam@onecodex.com>
+FROM ubuntu
 
 # Update and install Python
 RUN apt-get update -y
-RUN apt-get install -y python python-pip curl wget git pigz
+RUN apt-get install -y python3 python3-pip curl wget git pigz
 
 # Install Bats
 RUN git clone https://github.com/sstephenson/bats.git /tmp/bats && \
@@ -11,9 +10,9 @@ RUN git clone https://github.com/sstephenson/bats.git /tmp/bats && \
 
 # Install requirements.txt (One Codex CLI)
 ADD requirements.txt /tmp/requirements.txt
-RUN pip install -r /tmp/requirements.txt && rm /tmp/requirements.txt
+RUN pip install -r /tmp/requirements.txt --break-system-packages && rm /tmp/requirements.txt
 
-# Add the AWS CLI binaries
+# Add the SRA toolkit binaries
 RUN cd /tmp && \
     wget http://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.0/sratoolkit.2.8.0-ubuntu64.tar.gz && \
     tar xzvf sratoolkit.2.8.0-ubuntu64.tar.gz && \
